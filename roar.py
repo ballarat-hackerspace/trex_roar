@@ -29,7 +29,7 @@ def hello_world():
 
     interval = (now - g['last_roared']).seconds
     if  interval >= MIN_ROAR_INTERVAL:
-        #slack.chat.post_message('#random', 'ROAR!', as_user=True, link_names=1)
+        slack.chat.post_message('#random', 'ROAR!', as_user=True, link_names=1)
         g['last_roared'] = now
         is_set = True
         return "Roared: {} ({}s since) is_set={}".format(g['last_roared'], interval, is_set)
