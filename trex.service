@@ -2,8 +2,9 @@
 Description=Roars in slack when people upset it
 
 [Service]
-WorkingDirectory=/trex
-ExecStart=/trex/roar.py
+Environment=TREX=your_bot_access_token
+WorkingDirectory=/srv/trex
+ExecStart=python3 /srv/trex/roar.py
 Restart=always
 
 [Install]
