@@ -1,0 +1,10 @@
+[Unit]
+Description=Roars in slack when people upset it
+
+[Service]
+WorkingDirectory=/trex
+ExecStart=/trex/roar.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
