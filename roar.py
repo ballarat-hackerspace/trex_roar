@@ -20,8 +20,6 @@ def hello_world():
     # Send a message to #random channel
     now = datetime.now()
 
-    print(g)
-
     is_set = False
     if "last_roared" not in g:
         g['last_roared'] = now
@@ -40,7 +38,6 @@ def hello_world():
 def setup():
     global slack
     token = os.getenv('TREX')
-    print(token)
     if token is None:
         logging.error("You'll need an API access token, and ensure it is set to the environment variable TREX")
         exit(1)
