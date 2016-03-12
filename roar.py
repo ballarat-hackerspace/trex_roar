@@ -12,6 +12,10 @@ g = {}
 
 MIN_ROAR_INTERVAL = 5  # Do not roar if we roared within X seconds
 
+@app.route('/')
+def index():
+    return "here"
+
 @app.route('/roar')
 def hello_world():
     global slack, g
